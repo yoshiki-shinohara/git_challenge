@@ -1,0 +1,40 @@
+mkdir git_challenge
+cd git_challenge
+git init
+ls -a
+.	..	.git
+vim hello_world.txt
+cat hello_world.txt
+Hello, world!
+git add hello_world.txt
+git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   hello_world.txt
+git commit -m "hello_world.txtを追加"
+[master (root-commit) fee5af3] hello_world.txtを追加
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello_world.txt
+vim hello_world.txt
+cat hello_world.txt
+Hello, world!
+こんにちは、世界！
+git add hello_world.txt
+git diff --staged
+diff --git a/hello_world.txt b/hello_world.txt
+index af5626b..8ee003c 100644
+--- a/hello_world.txt
++++ b/hello_world.txt
+@@ -1 +1,2 @@
+ Hello, world!
++こんにちは、世界！
+git commit -m "日本語訳を追記"
+[master b467fce] 日本語訳を追記
+ 1 file changed, 1 insertion(+)
+git log --oneline
+b467fce (HEAD -> master) 日本語訳を追記
+fee5af3 hello_world.txtを追加
